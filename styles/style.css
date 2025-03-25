@@ -1,27 +1,30 @@
 body {
   position: relative;
-  padding: 60px 0 432px 0;
-  width: 1610px;
-  height: 900px;
+  padding: 60px 0 432px;
+  width: 100%; 
 }
 
 body::before {
   content: "";
   position: absolute;
   inset: 0;
-  background-color: rgba(0, 0, 0, 0.5);
-  z-index: -2;
+  background-color: rgb(255 255 255 / 0.3); 
+  z-index: -1; 
 }
 
 .page__title {
-  margin: 0 430px 0 431px;
+  margin: 0 auto; 
   letter-spacing: 4.1px;
   max-width: 760px;
   text-align: center;
   font-weight: bold;
   font-size: 115.7px;
   text-transform: uppercase;
-  z-index: 2;
+  cursor: default; 
+}
+
+.page__title:hover {
+  color: rgb(76 76 76 / 0.7);
 }
 
 .page__title::after {
@@ -34,7 +37,7 @@ body::before {
   content: "На самом деле нет.\AВажнее &mdash; научиться ошибаться.";
   position: absolute;
   top: 179px;
-  left: 840px;
+  right: 20px;
   white-space: pre;
   z-index: 3;
   padding: 36px 44px;
@@ -42,19 +45,23 @@ body::before {
   text-align: start;
   border-radius: 20px;
   border: 2px solid #000;
-  background-color: #fff;
+  background-color: #fff; 
   font-weight: normal;
   font-size: 35px;
   letter-spacing: 0;
   line-height: 35px;
   text-transform: none;
-  box-shadow: 0 14px 2px #000;
+  box-shadow: 0 12px 0 #000;
+  color: #000 ; 
+  opacity: 1; 
 }
 
 .page__video {
   object-fit: cover;
+  object-position: center;
   position: absolute;
-  top: 0;
-  left: 0;
+  inset: 0; 
   z-index: -2;
+  width: 100%;
+  height: 100%;
 }
